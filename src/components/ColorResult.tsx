@@ -48,14 +48,24 @@ export function ColorResult({ mixedColor, closestPigmentName, onStartOver }: Col
         </div>
       </div>
 
-      <div className="flex gap-3">
-        <Button onClick={handleCopyColor} variant="outline" className="flex-1">
-          <Copy size={16} className="mr-2" />
-          Copy Color Info
+      <div className="flex gap-3 justify-center">
+        <Button 
+          onClick={handleCopyColor} 
+          variant="outline" 
+          size="circular"
+          className="hover:scale-105 active:scale-95 transition-transform"
+          title="Copy Color Info"
+        >
+          <Copy size={16} />
         </Button>
-        <Button onClick={onStartOver} variant="outline">
-          <RotateCcw size={16} className="mr-2" />
-          Start Over
+        <Button 
+          onClick={onStartOver} 
+          variant="outline"
+          size="circular"
+          className="hover:scale-105 active:scale-95 transition-transform"
+          title="Start Over"
+        >
+          <RotateCcw size={16} />
         </Button>
       </div>
     </div>
