@@ -76,10 +76,10 @@ const Index = () => {
           <div className="text-center mb-6">
             <Button 
               onClick={handleMixColors}
-              size="lg"
-              className="bg-gradient-accent hover:opacity-90 transition-opacity"
+              size="circular-lg"
+              className="bg-gradient-accent hover:opacity-90 transition-opacity hover:scale-105 active:scale-95"
             >
-              Mix Colors
+              <Palette className="w-6 h-6" />
             </Button>
           </div>
         )}

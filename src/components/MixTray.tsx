@@ -32,21 +32,22 @@ export function MixTray({ selectedPigments, onRemovePigment }: MixTrayProps) {
           return (
             <div
               key={`${pigment.name}-${index}`}
-              className="relative group"
+              className="relative group flex flex-col items-center gap-2"
             >
-              <div
-                className="w-16 h-16 rounded-lg border-2 border-white shadow-palette flex items-center justify-center"
-                style={{ backgroundColor: pigment.hex }}
-              >
+              <div className="relative">
+                <div
+                  className="w-16 h-16 rounded-full border-2 border-white shadow-palette flex items-center justify-center"
+                  style={{ backgroundColor: pigment.hex }}
+                />
                 <button
                   onClick={() => onRemovePigment(index)}
-                  className="absolute -top-2 -right-2 bg-destructive text-destructive-foreground rounded-full w-6 h-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:scale-110"
+                  className="absolute -top-2 -right-2 bg-destructive text-destructive-foreground rounded-full w-6 h-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 active:scale-95"
                   aria-label={`Remove ${pigment.name}`}
                 >
                   <X size={12} />
                 </button>
               </div>
-              <p className="text-xs text-center text-muted-foreground mt-1 truncate max-w-16">
+              <p className="text-xs text-center text-muted-foreground leading-tight max-w-16">
                 {pigment.name.split(' ')[0]}
               </p>
             </div>
